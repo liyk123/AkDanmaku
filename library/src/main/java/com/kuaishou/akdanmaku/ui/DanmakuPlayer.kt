@@ -142,7 +142,7 @@ class DanmakuPlayer(renderer: DanmakuRenderer, dataSource: DataSource? = null) {
     engine.act()
     // Post invalidate view to force onDraw's call on next frame.
     startTrace("postInvalidate")
-    danmakuView?.postInvalidateOnAnimation()
+    danmakuView?.doDraw()
     endTrace()
     endTrace()
   }
